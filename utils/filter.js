@@ -1,3 +1,6 @@
+const fs = require("fs");
+const path = require("path");
+
 const filterByQuery = (query, animalsArray) => {
   let personalityTraitsArray = [];
 
@@ -46,7 +49,14 @@ const findByID = (id, animalsArray) => {
 
 const createNewAnimal = (body, animalsArray) => {
   const animal = body;
+
   animalsArray.push(animal);
+
+  fs.writeFileSync(
+    path.join(__dirname, "../db/animals.json"),
+    JSON.stringify({ animals: animalsArray }, null, 2)
+  );
+
   return animal;
 };
 
