@@ -1,0 +1,29 @@
+{
+  "name": "zoo-keeper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/etorres-revature/zoo-keeper.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "javascript"
+  ],
+  "author": "Eric D. Torres",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/etorres-revature/zoo-keeper/issues"
+  },
+  "homepage": "https://github.com/etorres-revature/zoo-keeper#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.13"
+  }
+}
