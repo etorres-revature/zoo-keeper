@@ -4,7 +4,7 @@ const {
   findByID,
   createNewAnimal,
   validateAnimal,
-} = require("../../utils/filter");
+} = require("../../utils/animalFuncs");
 const { animals } = require("../../db/animals.json");
 
 router.get("/animals", (req, res) => {
