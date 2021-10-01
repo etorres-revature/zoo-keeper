@@ -119,7 +119,7 @@
       "id": "11"
     },
     {
-      "name": "Harry Hippo",
+      "name": "Harry",
       "species": "Hippopotamus",
       "diet": "herbivore",
       "personalityTraits": [
@@ -130,7 +130,7 @@
       "id": "12"
     },
     {
-      "name": "Ollie Ostrich",
+      "name": "Ollie",
       "species": "Ostrich",
       "diet": "folivore",
       "personalityTraits": [
