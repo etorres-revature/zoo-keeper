@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/etorres-revature/zoo-keeper/issues"
   },
-  "homepage": "https://github.com/etorres-revature/zoo-keeper#readme"
+  "homepage": "https://github.com/etorres-revature/zoo-keeper#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
