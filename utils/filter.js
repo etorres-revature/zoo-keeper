@@ -38,4 +38,10 @@ const filterByQuery = (query, animalsArray) => {
   return filteredResults;
 };
 
-module.exports = filterByQuery;
+const findByID = (id, animalsArray) => {
+  const result = animalsArray.filter((animal) => animal.id === id)[0];
+
+  return result;
+};
+
+module.exports = { filterByQuery, findByID };

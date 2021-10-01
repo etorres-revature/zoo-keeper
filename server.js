@@ -1,6 +1,6 @@
 const express = require("express");
 const { animals } = require("./db/animals.json");
-const filterByQuery = require("./utils/filter");
+const { filterByQuery, findByID } = require("./utils/filter");
 
 const app = express();
 
@@ -11,7 +11,17 @@ app.get("/api/animals", (req, res) => {
   if (req.query) {
     results = filterByQuery(req.query, results);
   }
+
   res.json(results);
+});
+
+app.get("/api/animals/:id", (req, res) => {
+  const result = findByID(req.params.id, animals);
+  if (result) {
+    res.json(result);
+  } else {
+    res.status(404).send("result not found...");
+  }
 });
 
 app.listen(PORT, () =>
