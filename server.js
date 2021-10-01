@@ -4,6 +4,9 @@ const { filterByQuery, findByID } = require("./utils/filter");
 
 const app = express();
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 const PORT = process.env.PORT || 3001;
 
 app.get("/api/animals", (req, res) => {
@@ -23,6 +26,8 @@ app.get("/api/animals/:id", (req, res) => {
     res.status(404).send("result not found...");
   }
 });
+
+app.post("api/animals", (req, res) => {});
 
 app.listen(PORT, () =>
   console.log(`Server is live at http://localhost:${PORT}`)
