@@ -44,4 +44,10 @@ const findByID = (id, animalsArray) => {
   return result;
 };
 
-module.exports = { filterByQuery, findByID };
+const createNewAnimal = (body, animalsArray) => {
+  const animal = body;
+  animalsArray.push(animal);
+  return animal;
+};
+
+module.exports = { filterByQuery, findByID, createNewAnimal };

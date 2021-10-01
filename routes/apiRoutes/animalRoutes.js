@@ -1,5 +1,9 @@
 const router = require("express").Router();
-const { filterByQuery, findByID } = require("../../utils/filter");
+const {
+  filterByQuery,
+  findByID,
+  createNewAnimal,
+} = require("../../utils/filter");
 const { animals } = require("../../db/animals.json");
 
 router.get("/animals", (req, res) => {
@@ -20,6 +24,12 @@ router.get("/animals/:id", (req, res) => {
   }
 });
 
-router.post("/animals", (req, res) => {});
+router.post("/animals", (req, res) => {
+  req.body.id = animals.length.toString();
+
+  const animal = createNewAnimal(req.body, animals);
+
+  res.status(201).json(animal);
+});
 
 module.exports = router;
