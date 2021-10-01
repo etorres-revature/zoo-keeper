@@ -1,17 +1,17 @@
-const router = require("experss").Router();
+const router = require("express").Router();
 const {
   filterByQuery,
   findByID,
   createNewZookeeper,
   validateZookeeper,
-} = require("../../utils/zooKeeperFuncs");
+} = require("../../utils/zookeeperFuncs");
 const { zookeepers } = require("../../db/zookeepers.json");
 
 router.get("/zookeepers", (req, res) => {
   let results = zookeepers;
 
   if (req.query) {
-    results = filterByQuery(res.query, results);
+    results = filterByQuery(req.query, results);
   }
 
   res.json(results);
