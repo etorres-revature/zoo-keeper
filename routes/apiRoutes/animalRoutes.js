@@ -3,6 +3,7 @@ const {
   filterByQuery,
   findByID,
   createNewAnimal,
+  validateAnimal,
 } = require("../../utils/filter");
 const { animals } = require("../../db/animals.json");
 
@@ -27,9 +28,17 @@ router.get("/animals/:id", (req, res) => {
 router.post("/animals", (req, res) => {
   req.body.id = animals.length.toString();
 
-  const animal = createNewAnimal(req.body, animals);
+  if (!validateAnimal(req.body)) {
+    res
+      .status(400)
+      .send(
+        "Your entry of this animal has not been properly formatted; please try again."
+      );
+  } else {
+    const animal = createNewAnimal(req.body, animals);
 
-  res.status(201).json(animal);
+    res.status(201).json(animal);
+  }
 });
 
 module.exports = router;
