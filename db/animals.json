@@ -117,6 +117,28 @@
         "hungry"
       ],
       "id": "11"
+    },
+    {
+      "name": "Harry Hippo",
+      "species": "Hippopotamus",
+      "diet": "herbivore",
+      "personalityTraits": [
+        "hungry",
+        "anxious",
+        "goofy"
+      ],
+      "id": "12"
+    },
+    {
+      "name": "Ollie Ostrich",
+      "species": "Ostrich",
+      "diet": "folivore",
+      "personalityTraits": [
+        "zany",
+        "anxious",
+        "loving"
+      ],
+      "id": "13"
     }
   ]
 }
